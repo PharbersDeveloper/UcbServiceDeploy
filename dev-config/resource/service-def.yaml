@@ -321,6 +321,7 @@ resources:
   - UcbRepresentativeSalesReportStorage
   - UcbSalesConfigStorage
   - UcbBusinessinputStorage
+  - UcbGoodsinputStorage
 - name: UcbBusinessinputResource
   method: NewBusinessinputResource
   storages:
