@@ -43,6 +43,8 @@ models:
   - UcbTitle
   - UcbGeneralPerformanceResult
   - UcbGoodsinput
+  - UcbCity
+  - UcbManagerGoodsConfig
 
 storages:
 - name: UcbImageStorage
@@ -219,6 +221,14 @@ storages:
   - BmMongodbDaemon
 - name: UcbGoodsinputStorage
   method: NewGoodsinputStorage
+  daemons:
+  - BmMongodbDaemon
+- name: UcbCityStorage
+  method: NewCityStorage
+  daemons:
+  - BmMongodbDaemon
+- name: UcbManagerGoodsConfigStorage
+  method: NewManagerGoodsConfigStorage
   daemons:
   - BmMongodbDaemon
 
@@ -508,9 +518,16 @@ resources:
   storages:
   - UcbGoodsinputStorage
   - UcbBusinessinputStorage
-
-
-
+- name: UcbCityResource
+  method: NewCityResource
+  storages:
+  - UcbCityStorage
+  - UcbRegionStorage
+- name: UcbManagerGoodsConfigResource
+  method: NewManagerGoodsConfigResource
+  storages:
+  - UcbManagerGoodsConfigStorage
+  - UcbManagerConfigStorage
 
 
 services:
@@ -646,7 +663,12 @@ services:
 - name: ucb-Goodsinput
   model: UcbGoodsinput
   resource: UcbGoodsinputResource
-
+- name: ucb-city
+  model: UcbCity
+  resource: UcbCityResource
+- name: ucb-manager-goods-config
+  model: UcbManagerGoodsConfig
+  resource: UcbManagerGoodsConfigResource
 
 functions:
 - name: UcbGeneratePaperHandler
