@@ -1,644 +1,677 @@
 models:
-  - NtmImage
-  - NtmProduct
-  - NtmPolicy
-  - NtmHospital
-  - NtmDepartment
-  - NtmRegion
-  - NtmRepresentative
-  - NtmManagerConfig
-  - NtmRepresentativeConfig
-  - NtmRegionConfig
-  - NtmHospitalConfig
-  - NtmProductConfig
-  - NtmResourceConfig
-  - NtmDestConfig
-  - NtmScenario
-  - NtmProposal
-  - NtmUseableProposal
-  - NtmGoodsConfig
-  - NtmBusinessinput
-  - NtmRepresentativeinput
-  - NtmManagerinput
-  - NtmPaperinput
-  - NtmPaper
-  - NtmSalesConfig
-  - NtmSalesReport
-  - NtmHospitalSalesReport
-  - NtmProductSalesReport
-  - NtmRepresentativeSalesReport
-  - NtmTeamConfig
-  - NtmActionKpi
-  - NtmPersonnelAssessment
-  - NtmRepresentativeAbility
-  - NtmLevel
-  - NtmLevelConfig
-  - NtmAssessmentReportDescribe
-  - NtmRegionalDivisionResult
-  - NtmTargetAssignsResult
-  - NtmResourceAssignsResult
-  - NtmManageTimeResult
-  - NtmManageTeamResult
-  - NtmAssessmentReport
-  - NtmTitle
-  - NtmGeneralPerformanceResult
+  - UcbImage
+  - UcbProduct
+  - UcbPolicy
+  - UcbHospital
+  - UcbDepartment
+  - UcbRegion
+  - UcbRepresentative
+  - UcbManagerConfig
+  - UcbRepresentativeConfig
+  - UcbRegionConfig
+  - UcbHospitalConfig
+  - UcbProductConfig
+  - UcbResourceConfig
+  - UcbDestConfig
+  - UcbScenario
+  - UcbProposal
+  - UcbUseableProposal
+  - UcbGoodsConfig
+  - UcbBusinessinput
+  - UcbRepresentativeinput
+  - UcbManagerinput
+  - UcbPaperinput
+  - UcbPaper
+  - UcbSalesConfig
+  - UcbSalesReport
+  - UcbHospitalSalesReport
+  - UcbProductSalesReport
+  - UcbRepresentativeSalesReport
+  - UcbTeamConfig
+  - UcbActionKpi
+  - UcbPersonnelAssessment
+  - UcbRepresentativeAbility
+  - UcbLevel
+  - UcbLevelConfig
+  - UcbAssessmentReportDescribe
+  - UcbRegionalDivisionResult
+  - UcbTargetAssignsResult
+  - UcbResourceAssignsResult
+  - UcbManageTimeResult
+  - UcbManageTeamResult
+  - UcbAssessmentReport
+  - UcbTitle
+  - UcbGeneralPerformanceResult
+  - UcbGoodsinput
+  - UcbCity
+  - UcbManagerGoodsConfig
 
 storages:
-- name: NtmImageStorage
+- name: UcbImageStorage
   method: NewImageStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmPolicyStorage
+- name: UcbPolicyStorage
   method: NewPolicyStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmHospitalStorage
+- name: UcbHospitalStorage
   method: NewHospitalStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmDepartmentStorage
+- name: UcbDepartmentStorage
   method: NewDepartmentStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmRegionStorage
+- name: UcbRegionStorage
   method: NewRegionStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmProductStorage
+- name: UcbProductStorage
   method: NewProductStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmRepresentativeStorage
+- name: UcbRepresentativeStorage
   method: NewRepresentativeStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmManagerConfigStorage
+- name: UcbManagerConfigStorage
   method: NewManagerConfigStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmRepresentativeConfigStorage
+- name: UcbRepresentativeConfigStorage
   method: NewRepresentativeConfigStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmRegionConfigStorage
+- name: UcbRegionConfigStorage
   method: NewRegionConfigStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmHospitalConfigStorage
+- name: UcbHospitalConfigStorage
   method: NewHospitalConfigStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmProductConfigStorage
+- name: UcbProductConfigStorage
   method: NewProductConfigStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmResourceConfigStorage
+- name: UcbResourceConfigStorage
   method: NewResourceConfigStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmGoodsConfigStorage
+- name: UcbGoodsConfigStorage
   method: NewGoodsConfigStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmBusinessinputStorage
+- name: UcbBusinessinputStorage
   method: NewBusinessinputStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmRepresentativeinputStorage
+- name: UcbRepresentativeinputStorage
   method: NewRepresentativeinputStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmManagerinputStorage
+- name: UcbManagerinputStorage
   method: NewManagerinputStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmPaperinputStorage
+- name: UcbPaperinputStorage
   method: NewPaperinputStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmDestConfigStorage
+- name: UcbDestConfigStorage
   method: NewDestConfigStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmScenarioStorage
+- name: UcbScenarioStorage
   method: NewScenarioStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmProposalStorage
+- name: UcbProposalStorage
   method: NewProposalStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmUseableProposalStorage
+- name: UcbUseableProposalStorage
   method: NewUseableProposalStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmPaperStorage
+- name: UcbPaperStorage
   method: NewPaperStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmSalesConfigStorage
+- name: UcbSalesConfigStorage
   method: NewSalesConfigStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmSalesReportStorage
+- name: UcbSalesReportStorage
   method: NewSalesReportStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmHospitalSalesReportStorage
+- name: UcbHospitalSalesReportStorage
   method: NewHospitalSalesReportStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmProductSalesReportStorage
+- name: UcbProductSalesReportStorage
   method: NewProductSalesReportStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmRepresentativeSalesReportStorage
+- name: UcbRepresentativeSalesReportStorage
   method: NewRepresentativeSalesReportStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmTeamConfigStorage
+- name: UcbTeamConfigStorage
   method: NewTeamConfigStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmActionKpiStorage
+- name: UcbActionKpiStorage
   method: NewActionKpiStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmPersonnelAssessmentStorage
+- name: UcbPersonnelAssessmentStorage
   method: NewPersonnelAssessmentStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmRepresentativeAbilityStorage
+- name: UcbRepresentativeAbilityStorage
   method: NewRepresentativeAbilityStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmLevelStorage
+- name: UcbLevelStorage
   method: NewLevelStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmLevelConfigStorage
+- name: UcbLevelConfigStorage
   method: NewLevelConfigStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmAssessmentReportDescribeStorage
+- name: UcbAssessmentReportDescribeStorage
   method: NewAssessmentReportDescribeStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmRegionalDivisionResultStorage
+- name: UcbRegionalDivisionResultStorage
   method: NewRegionalDivisionResultStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmTargetAssignsResultStorage
+- name: UcbTargetAssignsResultStorage
   method: NewTargetAssignsResultStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmResourceAssignsResultStorage
+- name: UcbResourceAssignsResultStorage
   method: NewResourceAssignsResultStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmManageTimeResultStorage
+- name: UcbManageTimeResultStorage
   method: NewManageTimeResultStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmManageTeamResultStorage
+- name: UcbManageTeamResultStorage
   method: NewManageTeamResultStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmAssessmentReportStorage
+- name: UcbAssessmentReportStorage
   method: NewAssessmentReportStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmTitleStorage
+- name: UcbTitleStorage
   method: NewTitleStorage
   daemons:
   - BmMongodbDaemon
-- name: NtmGeneralPerformanceResultStorage
+- name: UcbGeneralPerformanceResultStorage
   method: NewGeneralPerformanceResultStorage
+  daemons:
+  - BmMongodbDaemon
+- name: UcbGoodsinputStorage
+  method: NewGoodsinputStorage
+  daemons:
+  - BmMongodbDaemon
+- name: UcbCityStorage
+  method: NewCityStorage
+  daemons:
+  - BmMongodbDaemon
+- name: UcbManagerGoodsConfigStorage
+  method: NewManagerGoodsConfigStorage
   daemons:
   - BmMongodbDaemon
 
 resources:
-- name: NtmImageResource
+- name: UcbImageResource
   method: NewImageResource
   storages:
-  - NtmImageStorage
-  - NtmProductStorage
-  - NtmHospitalStorage
-  - NtmRegionStorage
-  - NtmRepresentativeStorage
-  - NtmLevelStorage
-  - NtmTitleStorage
-- name: NtmPolicyResource
+  - UcbImageStorage
+  - UcbProductStorage
+  - UcbHospitalStorage
+  - UcbRegionStorage
+  - UcbRepresentativeStorage
+  - UcbLevelStorage
+  - UcbTitleStorage
+- name: UcbPolicyResource
   method: NewPolicyResource
   storages:
-  - NtmPolicyStorage
-  - NtmHospitalConfigStorage
-- name: NtmHospitalResource
+  - UcbPolicyStorage
+  - UcbHospitalConfigStorage
+- name: UcbHospitalResource
   method: NewHospitalResource
   storages:
-  - NtmHospitalStorage
-  - NtmImageStorage
-  - NtmHospitalConfigStorage
-- name: NtmDepartmentResource
+  - UcbHospitalStorage
+  - UcbImageStorage
+  - UcbHospitalConfigStorage
+- name: UcbDepartmentResource
   method: NewDepartmentResource
   storages:
-  - NtmDepartmentStorage
-  - NtmHospitalConfigStorage
-- name: NtmRegionResource
+  - UcbDepartmentStorage
+  - UcbHospitalConfigStorage
+- name: UcbRegionResource
   method: NewRegionResource
   storages:
-  - NtmRegionStorage
-  - NtmImageStorage
-  - NtmRegionConfigStorage
-- name: NtmProductResource
+  - UcbRegionStorage
+  - UcbImageStorage
+  - UcbRegionConfigStorage
+- name: UcbProductResource
   method: NewProductResource
   storages:
-  - NtmProductStorage
-  - NtmImageStorage
-  - NtmProductConfigStorage
-- name: NtmRepresentativeResource
+  - UcbProductStorage
+  - UcbImageStorage
+  - UcbProductConfigStorage
+- name: UcbRepresentativeResource
   method: NewRepresentativeResource
   storages:
-  - NtmRepresentativeStorage
-  - NtmImageStorage
-  - NtmRepresentativeConfigStorage
-  - NtmActionKpiStorage
-  - NtmRepresentativeAbilityStorage
-- name: NtmManagerConfigResource
+  - UcbRepresentativeStorage
+  - UcbImageStorage
+  - UcbRepresentativeConfigStorage
+  - UcbActionKpiStorage
+  - UcbRepresentativeAbilityStorage
+- name: UcbManagerConfigResource
   method: NewManagerConfigResource
   storages:
-  - NtmManagerConfigStorage
-  - NtmResourceConfigStorage
-- name: NtmRepresentativeConfigResource
+  - UcbManagerConfigStorage
+  - UcbResourceConfigStorage
+- name: UcbRepresentativeConfigResource
   method: NewRepresentativeConfigResource
   storages:
-  - NtmRepresentativeConfigStorage
-  - NtmResourceConfigStorage
-  - NtmRepresentativeStorage
-- name: NtmRegionConfigResource
+  - UcbRepresentativeConfigStorage
+  - UcbResourceConfigStorage
+  - UcbRepresentativeStorage
+- name: UcbRegionConfigResource
   method: NewRegionConfigResource
   storages:
-  - NtmRegionConfigStorage
-  - NtmRegionStorage
-  - NtmDestConfigStorage
-- name: NtmHospitalConfigResource
+  - UcbRegionConfigStorage
+  - UcbRegionStorage
+  - UcbDestConfigStorage
+- name: UcbHospitalConfigResource
   method: NewHospitalConfigResource
   storages:
-  - NtmHospitalConfigStorage
-  - NtmHospitalStorage
-  - NtmPolicyStorage
-  - NtmDepartmentStorage
-  - NtmDestConfigStorage
-- name: NtmProductConfigResource
+  - UcbHospitalConfigStorage
+  - UcbHospitalStorage
+  - UcbPolicyStorage
+  - UcbDepartmentStorage
+  - UcbDestConfigStorage
+- name: UcbProductConfigResource
   method: NewProductConfigResource
   storages:
-  - NtmProductConfigStorage
-  - NtmGoodsConfigStorage
-  - NtmProductStorage
-- name: NtmResourceConfigResource
+  - UcbProductConfigStorage
+  - UcbGoodsConfigStorage
+  - UcbProductStorage
+- name: UcbResourceConfigResource
   method: NewResourceConfigResource
   storages:
-  - NtmResourceConfigStorage
-  - NtmManagerConfigStorage
-  - NtmRepresentativeConfigStorage
-  - NtmTeamConfigStorage
-  - NtmRepresentativeinputStorage
-  - NtmBusinessinputStorage
-  - NtmRepresentativeSalesReportStorage
-  - NtmHospitalSalesReportStorage
-- name: NtmGoodsConfigResource
+  - UcbResourceConfigStorage
+  - UcbManagerConfigStorage
+  - UcbRepresentativeConfigStorage
+  - UcbTeamConfigStorage
+  - UcbRepresentativeinputStorage
+  - UcbBusinessinputStorage
+  - UcbRepresentativeSalesReportStorage
+  - UcbHospitalSalesReportStorage
+- name: UcbGoodsConfigResource
   method: NewGoodsConfigResource
   storages:
-  - NtmGoodsConfigStorage
-  - NtmProductConfigStorage
-  - NtmProductSalesReportStorage
-  - NtmHospitalSalesReportStorage
-  - NtmRepresentativeSalesReportStorage
-  - NtmSalesConfigStorage
-  - NtmBusinessinputStorage
-- name: NtmBusinessinputResource
+  - UcbGoodsConfigStorage
+  - UcbProductConfigStorage
+  - UcbProductSalesReportStorage
+  - UcbHospitalSalesReportStorage
+  - UcbRepresentativeSalesReportStorage
+  - UcbSalesConfigStorage
+  - UcbBusinessinputStorage
+  - UcbGoodsinputStorage
+- name: UcbBusinessinputResource
   method: NewBusinessinputResource
   storages:
-  - NtmBusinessinputStorage
-  - NtmPaperinputStorage
-- name: NtmRepresentativeinputResource
+  - UcbBusinessinputStorage
+  - UcbPaperinputStorage
+- name: UcbRepresentativeinputResource
   method: NewRepresentativeinputResource
   storages:
-  - NtmRepresentativeinputStorage
-  - NtmPaperinputStorage
-- name: NtmManagerinputResource
+  - UcbRepresentativeinputStorage
+  - UcbPaperinputStorage
+- name: UcbManagerinputResource
   method: NewManagerinputResource
   storages:
-  - NtmManagerinputStorage
-  - NtmPaperinputStorage
-- name: NtmPaperinputResource
+  - UcbManagerinputStorage
+  - UcbPaperinputStorage
+- name: UcbPaperinputResource
   method: NewPaperinputResource
   storages:
-  - NtmPaperinputStorage
-  - NtmBusinessinputStorage
-  - NtmRepresentativeinputStorage
-  - NtmManagerinputStorage
-  - NtmPaperStorage
-  - NtmScenarioStorage
-- name: NtmDestConfigResource
+  - UcbPaperinputStorage
+  - UcbBusinessinputStorage
+  - UcbRepresentativeinputStorage
+  - UcbManagerinputStorage
+  - UcbPaperStorage
+  - UcbScenarioStorage
+- name: UcbDestConfigResource
   method: NewDestConfigResource
   storages:
-  - NtmDestConfigStorage
-  - NtmHospitalConfigStorage
-  - NtmRegionConfigStorage
-  - NtmHospitalSalesReportStorage
-  - NtmSalesConfigStorage
-  - NtmBusinessinputStorage
-- name: NtmScenarioResource
+  - UcbDestConfigStorage
+  - UcbHospitalConfigStorage
+  - UcbRegionConfigStorage
+  - UcbHospitalSalesReportStorage
+  - UcbSalesConfigStorage
+  - UcbBusinessinputStorage
+- name: UcbScenarioResource
   method: NewScenarioResource
   storages:
-  - NtmScenarioStorage
-  - NtmProposalStorage
-  - NtmPaperStorage
-  - NtmPaperinputStorage
-  - NtmPersonnelAssessmentStorage
-  - NtmSalesReportStorage
-- name: NtmProposalResource
+  - UcbScenarioStorage
+  - UcbProposalStorage
+  - UcbPaperStorage
+  - UcbPaperinputStorage
+  - UcbPersonnelAssessmentStorage
+  - UcbSalesReportStorage
+- name: UcbProposalResource
   method: NewProposalResource
   storages:
-  - NtmProposalStorage
-  - NtmUseableProposalStorage
-- name: NtmUseableProposalResource
+  - UcbProposalStorage
+  - UcbUseableProposalStorage
+- name: UcbUseableProposalResource
   method: NewUseableProposalResource
   storages:
-  - NtmUseableProposalStorage
-  - NtmProposalStorage
-- name: NtmPaperResource
+  - UcbUseableProposalStorage
+  - UcbProposalStorage
+- name: UcbPaperResource
   method: NewPaperResource
   storages:
-  - NtmPaperStorage
-  - NtmPaperinputStorage
-  - NtmSalesReportStorage
-  - NtmPersonnelAssessmentStorage
-- name: NtmSalesReportResource
+  - UcbPaperStorage
+  - UcbPaperinputStorage
+  - UcbSalesReportStorage
+  - UcbPersonnelAssessmentStorage
+- name: UcbSalesReportResource
   method: NewSalesReportResource
   storages:
-  - NtmSalesReportStorage
-  - NtmHospitalSalesReportStorage
-  - NtmRepresentativeSalesReportStorage
-  - NtmProductSalesReportStorage
-  - NtmPaperStorage
-  - NtmSalesConfigStorage
-  - NtmScenarioStorage
-  - NtmProposalStorage
-- name: NtmSalesConfigResource
+  - UcbSalesReportStorage
+  - UcbHospitalSalesReportStorage
+  - UcbRepresentativeSalesReportStorage
+  - UcbProductSalesReportStorage
+  - UcbPaperStorage
+  - UcbSalesConfigStorage
+  - UcbScenarioStorage
+  - UcbProposalStorage
+- name: UcbSalesConfigResource
   method: NewSalesConfigResource
   storages:
-  - NtmSalesConfigStorage
-  - NtmPaperStorage
+  - UcbSalesConfigStorage
+  - UcbPaperStorage
   friendly:
-  - NtmSalesReportResource
-- name: NtmHospitalSalesReportResource
+  - UcbSalesReportResource
+- name: UcbHospitalSalesReportResource
   method: NewHospitalSalesReportResource
   storages:
-  - NtmHospitalSalesReportStorage
-  - NtmSalesReportStorage
-- name: NtmProductSalesReportResource
+  - UcbHospitalSalesReportStorage
+  - UcbSalesReportStorage
+- name: UcbProductSalesReportResource
   method: NewProductSalesReportResource
   storages:
-  - NtmProductSalesReportStorage
-  - NtmSalesReportStorage
-- name: NtmRepresentativeSalesReportResource
+  - UcbProductSalesReportStorage
+  - UcbSalesReportStorage
+- name: UcbRepresentativeSalesReportResource
   method: NewRepresentativeSalesReportResource
   storages:
-  - NtmRepresentativeSalesReportStorage
-  - NtmSalesReportStorage
-- name: NtmTeamConfigResource
+  - UcbRepresentativeSalesReportStorage
+  - UcbSalesReportStorage
+- name: UcbTeamConfigResource
   method: NewTeamConfigResource
   storages:
-  - NtmTeamConfigStorage
-  - NtmResourceConfigStorage
-- name: NtmPersonnelAssessmentResource
+  - UcbTeamConfigStorage
+  - UcbResourceConfigStorage
+- name: UcbPersonnelAssessmentResource
   method: NewPersonnelAssessmentResource
   storages:
-  - NtmPersonnelAssessmentStorage
-  - NtmPaperStorage
-- name: NtmRepresentativeAbilityResource
+  - UcbPersonnelAssessmentStorage
+  - UcbPaperStorage
+- name: UcbRepresentativeAbilityResource
   method: NewRepresentativeAbilityResource
   storages:
-  - NtmRepresentativeAbilityStorage
-  - NtmPersonnelAssessmentStorage
-- name: NtmActionKpiResource
+  - UcbRepresentativeAbilityStorage
+  - UcbPersonnelAssessmentStorage
+- name: UcbActionKpiResource
   method: NewActionKpiResource
   storages:
-  - NtmActionKpiStorage
-  - NtmPersonnelAssessmentStorage
-- name: NtmLevelResource
+  - UcbActionKpiStorage
+  - UcbPersonnelAssessmentStorage
+- name: UcbLevelResource
   method: NewLevelResource
   storages:
-  - NtmLevelStorage
-  - NtmLevelConfigStorage
-- name: NtmLevelConfigResource
+  - UcbLevelStorage
+  - UcbLevelConfigStorage
+- name: UcbLevelConfigResource
   method: NewLevelConfigResource
   storages:
-  - NtmLevelConfigStorage
-  - NtmRegionalDivisionResultStorage
-  - NtmTargetAssignsResultStorage
-  - NtmResourceAssignsResultStorage
-  - NtmManageTimeResultStorage
-  - NtmManageTeamResultStorage
-  - NtmGeneralPerformanceResultStorage
-- name: NtmAssessmentReportDescribeResource
+  - UcbLevelConfigStorage
+  - UcbRegionalDivisionResultStorage
+  - UcbTargetAssignsResultStorage
+  - UcbResourceAssignsResultStorage
+  - UcbManageTimeResultStorage
+  - UcbManageTeamResultStorage
+  - UcbGeneralPerformanceResultStorage
+- name: UcbAssessmentReportDescribeResource
   method: NewAssessmentReportDescribeResource
   storages:
-  - NtmAssessmentReportDescribeStorage
-  - NtmRegionalDivisionResultStorage
-  - NtmTargetAssignsResultStorage
-  - NtmResourceAssignsResultStorage
-  - NtmManageTimeResultStorage
-  - NtmManageTeamResultStorage
-- name: NtmRegionalDivisionResultResource
+  - UcbAssessmentReportDescribeStorage
+  - UcbRegionalDivisionResultStorage
+  - UcbTargetAssignsResultStorage
+  - UcbResourceAssignsResultStorage
+  - UcbManageTimeResultStorage
+  - UcbManageTeamResultStorage
+- name: UcbRegionalDivisionResultResource
   method: NewRegionalDivisionResultResource
   storages:
-  - NtmRegionalDivisionResultStorage
-  - NtmAssessmentReportStorage
-- name: NtmTargetAssignsResultResource
+  - UcbRegionalDivisionResultStorage
+  - UcbAssessmentReportStorage
+- name: UcbTargetAssignsResultResource
   method: NewTargetAssignsResultResource
   storages:
-  - NtmTargetAssignsResultStorage
-  - NtmAssessmentReportStorage
-- name: NtmResourceAssignsResultResource
+  - UcbTargetAssignsResultStorage
+  - UcbAssessmentReportStorage
+- name: UcbResourceAssignsResultResource
   method: NewResourceAssignsResultResource
   storages:
-  - NtmResourceAssignsResultStorage
-  - NtmAssessmentReportStorage
-- name: NtmManageTimeResultResource
+  - UcbResourceAssignsResultStorage
+  - UcbAssessmentReportStorage
+- name: UcbManageTimeResultResource
   method: NewManageTimeResultResource
   storages:
-  - NtmManageTimeResultStorage
-  - NtmAssessmentReportStorage
-- name: NtmManageTeamResultResource
+  - UcbManageTimeResultStorage
+  - UcbAssessmentReportStorage
+- name: UcbManageTeamResultResource
   method: NewManageTeamResultResource
   storages:
-  - NtmManageTeamResultStorage
-  - NtmAssessmentReportStorage
-- name: NtmAssessmentReportResource
+  - UcbManageTeamResultStorage
+  - UcbAssessmentReportStorage
+- name: UcbAssessmentReportResource
   method: NewAssessmentReportResource
   storages:
-  - NtmAssessmentReportStorage
-  - NtmRegionalDivisionResultStorage
-  - NtmTargetAssignsResultStorage
-  - NtmResourceAssignsResultStorage
-  - NtmManageTimeResultStorage
-  - NtmManageTeamResultStorage
-  - NtmPaperStorage
-- name: NtmTitleResource
+  - UcbAssessmentReportStorage
+  - UcbRegionalDivisionResultStorage
+  - UcbTargetAssignsResultStorage
+  - UcbResourceAssignsResultStorage
+  - UcbManageTimeResultStorage
+  - UcbManageTeamResultStorage
+  - UcbPaperStorage
+- name: UcbTitleResource
   method: NewTitleResource
   storages:
-  - NtmTitleStorage
-  - NtmLevelConfigStorage
-- name: NtmGeneralPerformanceResultResource
+  - UcbTitleStorage
+  - UcbLevelConfigStorage
+- name: UcbGeneralPerformanceResultResource
   method: NewGeneralPerformanceResultResource
   storages:
-  - NtmGeneralPerformanceResultStorage
-  - NtmAssessmentReportStorage
-
-
-
+  - UcbGeneralPerformanceResultStorage
+  - UcbAssessmentReportStorage
+- name: UcbGoodsinputResource
+  method: NewGoodsinputResource
+  storages:
+  - UcbGoodsinputStorage
+  - UcbBusinessinputStorage
+- name: UcbCityResource
+  method: NewCityResource
+  storages:
+  - UcbCityStorage
+  - UcbRegionStorage
+- name: UcbManagerGoodsConfigResource
+  method: NewManagerGoodsConfigResource
+  storages:
+  - UcbManagerGoodsConfigStorage
+  - UcbManagerConfigStorage
 
 
 services:
-- name: ntm-image
-  model: NtmImage
-  resource: NtmImageResource
-- name: ntm-policy
-  model: NtmPolicy
-  resource: NtmPolicyResource
-- name: ntm-hospital
-  model: NtmHospital
-  resource: NtmHospitalResource
-- name: ntm-department
-  model: NtmDepartment
-  resource: NtmDepartmentResource
-- name: ntm-region
-  model: NtmRegion
-  resource: NtmRegionResource
-- name: ntm-product
-  model: NtmProduct
-  resource: NtmProductResource
-- name: ntm-representative
-  model: NtmRepresentative
-  resource: NtmRepresentativeResource
-- name: ntm-managerConfig
-  model: NtmManagerConfig
-  resource: NtmManagerConfigResource
-- name: ntm-representativeConfig
-  model: NtmRepresentativeConfig
-  resource: NtmRepresentativeConfigResource
-- name: ntm-regionConfig
-  model: NtmRegionConfig
-  resource: NtmRegionConfigResource
-- name: ntm-hospitalConfig
-  model: NtmHospitalConfig
-  resource: NtmHospitalConfigResource
-- name: ntm-productConfig
-  model: NtmProductConfig
-  resource: NtmProductConfigResource
-- name: ntm-resourceConfig
-  model: NtmResourceConfig
-  resource: NtmResourceConfigResource
-- name: ntm-goodsConfig
-  model: NtmGoodsConfig
-  resource: NtmGoodsConfigResource
-- name: ntm-Businessinput
-  model: NtmBusinessinput
-  resource: NtmBusinessinputResource
-- name: ntm-Representativeinput
-  model: NtmRepresentativeinput
-  resource: NtmRepresentativeinputResource
-- name: ntm-Managerinput
-  model: NtmManagerinput
-  resource: NtmManagerinputResource
-- name: ntm-Paperinput
-  model: NtmPaperinput
-  resource: NtmPaperinputResource
-- name: ntm-destConfig
-  model: NtmDestConfig
-  resource: NtmDestConfigResource
-- name: ntm-scenario
-  model: NtmScenario
-  resource: NtmScenarioResource
-- name: ntm-proposal
-  model: NtmProposal
-  resource: NtmProposalResource
-- name: ntm-useable-proposal
-  model: NtmUseableProposal
-  resource: NtmUseableProposalResource
-- name: ntm-paper
-  model: NtmPaper
-  resource: NtmPaperResource
-- name: ntm-sales-config
-  model: NtmSalesConfig
-  resource: NtmSalesConfigResource
-- name: ntm-sales-report
-  model: NtmSalesReport
-  resource: NtmSalesReportResource
-- name: ntm-hospital-sales-report
-  model: NtmHospitalSalesReport
-  resource: NtmHospitalSalesReportResource
-- name: ntm-product-sales-report
-  model: NtmProductSalesReport
-  resource: NtmProductSalesReportResource
-- name: ntm-representative-sales-report
-  model: NtmRepresentativeSalesReport
-  resource: NtmRepresentativeSalesReportResource
-- name: ntm-team-config
-  model: NtmTeamConfig
-  resource: NtmTeamConfigResource
-- name: ntm-action-kpi
-  model: NtmActionKpi
-  resource: NtmActionKpiResource
-- name: ntm-representative-ability
-  model: NtmRepresentativeAbility
-  resource: NtmRepresentativeAbilityResource
-- name: ntm-personnel-assessment
-  model: NtmPersonnelAssessment
-  resource: NtmPersonnelAssessmentResource
-- name: ntm-level
-  model: NtmLevel
-  resource: NtmLevelResource
-- name: ntm-level-config
-  model: NtmLevelConfig
-  resource: NtmLevelConfigResource
-- name: ntm-assessment-report-describe
-  model: NtmAssessmentReportDescribe
-  resource: NtmAssessmentReportDescribeResource
-- name: ntm-regional-division-result
-  model: NtmRegionalDivisionResult
-  resource: NtmRegionalDivisionResultResource
-- name: ntm-target-assigns-result
-  model: NtmTargetAssignsResult
-  resource: NtmTargetAssignsResultResource
-- name: ntm-resource-assigns-result
-  model: NtmResourceAssignsResult
-  resource: NtmResourceAssignsResultResource
-- name: ntm-manage-time-result
-  model: NtmManageTimeResult
-  resource: NtmManageTimeResultResource
-- name: ntm-manage-team-result
-  model: NtmManageTeamResult
-  resource: NtmManageTeamResultResource
-- name: ntm-assessment-report
-  model: NtmAssessmentReport
-  resource: NtmAssessmentReportResource
-- name: ntm-title
-  model: NtmTitle
-  resource: NtmTitleResource
-- name: ntm-general-performance-result
-  model: NtmGeneralPerformanceResult
-  resource: NtmGeneralPerformanceResultResource
-
-
-
-
+- name: ucb-image
+  model: UcbImage
+  resource: UcbImageResource
+- name: ucb-policy
+  model: UcbPolicy
+  resource: UcbPolicyResource
+- name: ucb-hospital
+  model: UcbHospital
+  resource: UcbHospitalResource
+- name: ucb-department
+  model: UcbDepartment
+  resource: UcbDepartmentResource
+- name: ucb-region
+  model: UcbRegion
+  resource: UcbRegionResource
+- name: ucb-product
+  model: UcbProduct
+  resource: UcbProductResource
+- name: ucb-representative
+  model: UcbRepresentative
+  resource: UcbRepresentativeResource
+- name: ucb-managerConfig
+  model: UcbManagerConfig
+  resource: UcbManagerConfigResource
+- name: ucb-representativeConfig
+  model: UcbRepresentativeConfig
+  resource: UcbRepresentativeConfigResource
+- name: ucb-regionConfig
+  model: UcbRegionConfig
+  resource: UcbRegionConfigResource
+- name: ucb-hospitalConfig
+  model: UcbHospitalConfig
+  resource: UcbHospitalConfigResource
+- name: ucb-productConfig
+  model: UcbProductConfig
+  resource: UcbProductConfigResource
+- name: ucb-resourceConfig
+  model: UcbResourceConfig
+  resource: UcbResourceConfigResource
+- name: ucb-goodsConfig
+  model: UcbGoodsConfig
+  resource: UcbGoodsConfigResource
+- name: ucb-Businessinput
+  model: UcbBusinessinput
+  resource: UcbBusinessinputResource
+- name: ucb-Representativeinput
+  model: UcbRepresentativeinput
+  resource: UcbRepresentativeinputResource
+- name: ucb-Managerinput
+  model: UcbManagerinput
+  resource: UcbManagerinputResource
+- name: ucb-Paperinput
+  model: UcbPaperinput
+  resource: UcbPaperinputResource
+- name: ucb-destConfig
+  model: UcbDestConfig
+  resource: UcbDestConfigResource
+- name: ucb-scenario
+  model: UcbScenario
+  resource: UcbScenarioResource
+- name: ucb-proposal
+  model: UcbProposal
+  resource: UcbProposalResource
+- name: ucb-useable-proposal
+  model: UcbUseableProposal
+  resource: UcbUseableProposalResource
+- name: ucb-paper
+  model: UcbPaper
+  resource: UcbPaperResource
+- name: ucb-sales-config
+  model: UcbSalesConfig
+  resource: UcbSalesConfigResource
+- name: ucb-sales-report
+  model: UcbSalesReport
+  resource: UcbSalesReportResource
+- name: ucb-hospital-sales-report
+  model: UcbHospitalSalesReport
+  resource: UcbHospitalSalesReportResource
+- name: ucb-product-sales-report
+  model: UcbProductSalesReport
+  resource: UcbProductSalesReportResource
+- name: ucb-representative-sales-report
+  model: UcbRepresentativeSalesReport
+  resource: UcbRepresentativeSalesReportResource
+- name: ucb-team-config
+  model: UcbTeamConfig
+  resource: UcbTeamConfigResource
+- name: ucb-action-kpi
+  model: UcbActionKpi
+  resource: UcbActionKpiResource
+- name: ucb-representative-ability
+  model: UcbRepresentativeAbility
+  resource: UcbRepresentativeAbilityResource
+- name: ucb-personnel-assessment
+  model: UcbPersonnelAssessment
+  resource: UcbPersonnelAssessmentResource
+- name: ucb-level
+  model: UcbLevel
+  resource: UcbLevelResource
+- name: ucb-level-config
+  model: UcbLevelConfig
+  resource: UcbLevelConfigResource
+- name: ucb-assessment-report-describe
+  model: UcbAssessmentReportDescribe
+  resource: UcbAssessmentReportDescribeResource
+- name: ucb-regional-division-result
+  model: UcbRegionalDivisionResult
+  resource: UcbRegionalDivisionResultResource
+- name: ucb-target-assigns-result
+  model: UcbTargetAssignsResult
+  resource: UcbTargetAssignsResultResource
+- name: ucb-resource-assigns-result
+  model: UcbResourceAssignsResult
+  resource: UcbResourceAssignsResultResource
+- name: ucb-manage-time-result
+  model: UcbManageTimeResult
+  resource: UcbManageTimeResultResource
+- name: ucb-manage-team-result
+  model: UcbManageTeamResult
+  resource: UcbManageTeamResultResource
+- name: ucb-assessment-report
+  model: UcbAssessmentReport
+  resource: UcbAssessmentReportResource
+- name: ucb-title
+  model: UcbTitle
+  resource: UcbTitleResource
+- name: ucb-general-performance-result
+  model: UcbGeneralPerformanceResult
+  resource: UcbGeneralPerformanceResultResource
+- name: ucb-Goodsinput
+  model: UcbGoodsinput
+  resource: UcbGoodsinputResource
+- name: ucb-city
+  model: UcbCity
+  resource: UcbCityResource
+- name: ucb-manager-goods-config
+  model: UcbManagerGoodsConfig
+  resource: UcbManagerGoodsConfigResource
 
 functions:
-- name: NtmGeneratePaperHandler
+- name: UcbGeneratePaperHandler
   create: NewGeneratePaperHandler
   daemons:
   - BmMongodbDaemon
@@ -647,7 +680,7 @@ functions:
   http: POST
   args:
   - papers
-- name: NtmCallRHandler
+- name: UcbCallRHandler
   create: NewCallRHandler
   daemons:
   - BmMongodbDaemon
@@ -656,18 +689,18 @@ functions:
   http: POST
   args:
 #  - docker.for.mac.host.internal:8000
-  - ntm_r_calc:8000
-  - ntm
+  - 127.0.0.1:8000
+  - Ucb
 
 middlewares:
-- name: NtmCheckTokenMiddleware
+- name: UcbCheckTokenMiddleware
   create: NewCheckTokenMiddleware
   daemons:
   - BmRedisDaemon
   args:
   - oauth.pharbers.com
 panic:
-  name: NtmCommonPanicHandle
+  name: UcbCommonPanicHandle
   create: NewCommonPanicHandle
 
 daemons:
