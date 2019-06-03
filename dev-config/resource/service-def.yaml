@@ -304,6 +304,7 @@ resources:
   - UcbPolicyStorage
   - UcbDepartmentStorage
   - UcbDestConfigStorage
+  - UcbCityStorage
 - name: UcbProductConfigResource
   method: NewProductConfigResource
   storages:
