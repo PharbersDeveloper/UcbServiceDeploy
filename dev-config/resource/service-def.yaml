@@ -333,6 +333,7 @@ resources:
   - UcbSalesConfigStorage
   - UcbBusinessinputStorage
   - UcbGoodsinputStorage
+  - UcbManagerGoodsConfigStorage
 - name: UcbBusinessinputResource
   method: NewBusinessinputResource
   storages:
