@@ -405,6 +405,7 @@ resources:
   - UcbHospitalSalesReportStorage
   - UcbRepresentativeSalesReportStorage
   - UcbProductSalesReportStorage
+  - UcbCitySalesReportStorage
   - UcbPaperStorage
   - UcbSalesConfigStorage
   - UcbScenarioStorage
