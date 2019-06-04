@@ -416,16 +416,21 @@ resources:
   storages:
   - UcbHospitalSalesReportStorage
   - UcbSalesReportStorage
+  - UcbDestConfigStorage
+  - UcbGoodsConfigStorage
+  - UcbResourceConfigStorage
 - name: UcbProductSalesReportResource
   method: NewProductSalesReportResource
   storages:
   - UcbProductSalesReportStorage
   - UcbSalesReportStorage
+  - UcbGoodsConfigStorage
 - name: UcbRepresentativeSalesReportResource
   method: NewRepresentativeSalesReportResource
   storages:
   - UcbRepresentativeSalesReportStorage
   - UcbSalesReportStorage
+  - UcbResourceConfigStorage
 - name: UcbTeamConfigResource
   method: NewTeamConfigResource
   storages:
