@@ -45,6 +45,7 @@ models:
   - UcbGoodsinput
   - UcbCity
   - UcbManagerGoodsConfig
+  - UcbCitySalesReport
 
 storages:
 - name: UcbImageStorage
@@ -229,6 +230,10 @@ storages:
   - BmMongodbDaemon
 - name: UcbManagerGoodsConfigStorage
   method: NewManagerGoodsConfigStorage
+  daemons:
+  - BmMongodbDaemon
+- name: UcbCitySalesReportStorage
+  method: NewCitySalesReportStorage
   daemons:
   - BmMongodbDaemon
 
@@ -535,6 +540,11 @@ resources:
   storages:
   - UcbManagerGoodsConfigStorage
   - UcbManagerConfigStorage
+- name: UcbCitySalesReportResource
+  method: NewCitySalesReportResource
+  storages:
+  - UcbCitySalesReportStorage
+  - UcbSalesReportStorage
 
 
 services:
@@ -676,6 +686,9 @@ services:
 - name: ucb-manager-goods-config
   model: UcbManagerGoodsConfig
   resource: UcbManagerGoodsConfigResource
+- name: ucb-city-sales-report
+  model: UcbCitySalesReport
+  resource: UcbCitySalesReportResource
 
 functions:
 - name: UcbGeneratePaperHandler
