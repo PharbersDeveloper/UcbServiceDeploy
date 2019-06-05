@@ -710,9 +710,7 @@ functions:
   method: CallRCalculate
   http: POST
   args:
-#  - docker.for.mac.host.internal:8000
-  - 127.0.0.1:8000
-  - Ucb
+    - name
 
 middlewares:
 - name: UcbCheckTokenMiddleware
