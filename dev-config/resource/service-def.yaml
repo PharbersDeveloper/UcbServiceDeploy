@@ -398,6 +398,11 @@ resources:
   - UcbPaperinputStorage
   - UcbSalesReportStorage
   - UcbPersonnelAssessmentStorage
+  - UcbScenarioStorage
+  - UcbProductSalesReportStorage
+  - UcbGoodsConfigStorage
+  - UcbProductConfigStorage
+  - UcbProductStorage
 - name: UcbSalesReportResource
   method: NewSalesReportResource
   storages:
