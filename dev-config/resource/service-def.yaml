@@ -339,6 +339,7 @@ resources:
   - UcbBusinessinputStorage
   - UcbGoodsinputStorage
   - UcbManagerGoodsConfigStorage
+  - UcbCitySalesReportStorage
 - name: UcbBusinessinputResource
   method: NewBusinessinputResource
   storages:
@@ -403,6 +404,16 @@ resources:
   - UcbGoodsConfigStorage
   - UcbProductConfigStorage
   - UcbProductStorage
+  - UcbCitySalesReportStorage
+  - UcbCityStorage
+  - UcbRepresentativeSalesReportStorage
+  - UcbResourceConfigStorage
+  - UcbRepresentativeConfigStorage
+  - UcbRepresentativeStorage
+  - UcbHospitalSalesReportStorage
+  - UcbDestConfigStorage
+  - UcbHospitalConfigStorage
+  - UcbHospitalStorage
 - name: UcbSalesReportResource
   method: NewSalesReportResource
   storages:
