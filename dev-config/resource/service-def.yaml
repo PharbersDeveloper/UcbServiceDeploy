@@ -726,7 +726,16 @@ functions:
   method: CallRCalculate
   http: POST
   args:
-    - name
+  - name
+- name: UcbRResulrHandler
+  create: NewCallRHandler
+  daemons:
+  - BmMongodbDaemon
+  - BmRedisDaemon
+  method: Temp
+  http: GET
+  args:
+  - name
 
 middlewares:
 - name: UcbCheckTokenMiddleware
