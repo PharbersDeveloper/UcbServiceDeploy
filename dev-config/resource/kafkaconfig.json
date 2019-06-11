@@ -1,0 +1,14 @@
+
+{
+  "Broker":"59.110.31.50:9092",
+  "SchemaRepositoryUrl":"http://59.110.31.50:8081",
+  "Group":"test20190516",
+  "CaLocation":"~/secrets/kafka/snakeoil-ca-1.crt",
+  "CaSignedLocation":"~/secrets/kafka/kafkacat-ca1-signed.pem",
+  "SslKeyLocation":"~/secrets/kafka/kafkacat.client.key",
+  "Pass":"pharbers",
+  "Topics": [
+    "GoCallRTopic",
+    "RReturnResult"
+  ]
+}
