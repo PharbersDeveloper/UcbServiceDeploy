@@ -772,15 +772,16 @@ daemons:
   - name: BmMongodbDaemon
     method: NewMongoDBDaemon
     args:
-      host: 123.56.179.133
-      port: 5555
-      user: pharbers
-      pass: pharbers2019
+      host: primary
+      port: 27017
+      # user: pharbers
+      # pass: pharbers2019
       database: pharbers-ucb-client-temp
   - name: BmRedisDaemon
     method: NewRedisDBDaemon
     args:
-      host: 123.56.179.133
-      port: 6378
-      password: pharbers
+      host: redis
+      port: 6379
+      password:
+      # password: pharbers
       database: 0
