@@ -46,6 +46,8 @@ models:
   - UcbCity
   - UcbManagerGoodsConfig
   - UcbCitySalesReport
+  - UcbSimplifyResult
+  - UcbScenarioResult
 
 storages:
 - name: UcbImageStorage
@@ -236,6 +238,14 @@ storages:
   method: NewCitySalesReportStorage
   daemons:
   - BmMongodbDaemon
+- name: UcbSimplifyResultStorage
+  method: NewSimplifyResultStorage
+  daemons:
+  - BmMongodbDaemon
+- name: UcbScenarioResultStorage
+  method: NewScenarioResultStorage
+  daemons:
+  - BmMongodbDaemon
 
 resources:
 - name: UcbImageResource
@@ -382,6 +392,7 @@ resources:
   - UcbPaperinputStorage
   - UcbPersonnelAssessmentStorage
   - UcbSalesReportStorage
+  - UcbScenarioResultStorage
 - name: UcbProposalResource
   method: NewProposalResource
   storages:
@@ -563,6 +574,16 @@ resources:
   storages:
   - UcbCitySalesReportStorage
   - UcbSalesReportStorage
+- name: UcbSimplifyResultResource
+  method: NewSimplifyResultResource
+  storages:
+  - UcbSimplifyResultStorage
+  - UcbAssessmentReportStorage
+- name: UcbScenarioResultResource
+  method: NewScenarioResultResource
+  storages:
+  - UcbScenarioResultStorage
+  - UcbSimplifyResultStorage
 
 
 services:
@@ -707,6 +728,13 @@ services:
 - name: ucb-city-sales-report
   model: UcbCitySalesReport
   resource: UcbCitySalesReportResource
+- name: ucb-simplify-result
+  model: UcbSimplifyResult
+  resource: UcbSimplifyResultResource
+- name: ucb-scenario-result
+  model: UcbScenarioResult
+  resource: UcbScenarioResultResource
+
 
 functions:
 - name: UcbGeneratePaperHandler
