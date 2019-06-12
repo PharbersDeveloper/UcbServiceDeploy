@@ -727,15 +727,6 @@ functions:
   http: POST
   args:
   - name
-- name: UcbRResulrHandler
-  create: NewCallRHandler
-  daemons:
-  - BmMongodbDaemon
-  - BmRedisDaemon
-  method: Temp
-  http: GET
-  args:
-  - name
 
 middlewares:
 - name: UcbCheckTokenMiddleware
