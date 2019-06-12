@@ -45,6 +45,9 @@ models:
   - UcbGoodsinput
   - UcbCity
   - UcbManagerGoodsConfig
+  - UcbCitySalesReport
+  - UcbSimplifyResult
+  - UcbScenarioResult
 
 storages:
 - name: UcbImageStorage
@@ -231,6 +234,18 @@ storages:
   method: NewManagerGoodsConfigStorage
   daemons:
   - BmMongodbDaemon
+- name: UcbCitySalesReportStorage
+  method: NewCitySalesReportStorage
+  daemons:
+  - BmMongodbDaemon
+- name: UcbSimplifyResultStorage
+  method: NewSimplifyResultStorage
+  daemons:
+  - BmMongodbDaemon
+- name: UcbScenarioResultStorage
+  method: NewScenarioResultStorage
+  daemons:
+  - BmMongodbDaemon
 
 resources:
 - name: UcbImageResource
@@ -304,6 +319,7 @@ resources:
   - UcbPolicyStorage
   - UcbDepartmentStorage
   - UcbDestConfigStorage
+  - UcbCityStorage
 - name: UcbProductConfigResource
   method: NewProductConfigResource
   storages:
@@ -332,6 +348,8 @@ resources:
   - UcbSalesConfigStorage
   - UcbBusinessinputStorage
   - UcbGoodsinputStorage
+  - UcbManagerGoodsConfigStorage
+  - UcbCitySalesReportStorage
 - name: UcbBusinessinputResource
   method: NewBusinessinputResource
   storages:
@@ -374,6 +392,7 @@ resources:
   - UcbPaperinputStorage
   - UcbPersonnelAssessmentStorage
   - UcbSalesReportStorage
+  - UcbScenarioResultStorage
 - name: UcbProposalResource
   method: NewProposalResource
   storages:
@@ -391,6 +410,21 @@ resources:
   - UcbPaperinputStorage
   - UcbSalesReportStorage
   - UcbPersonnelAssessmentStorage
+  - UcbScenarioStorage
+  - UcbProductSalesReportStorage
+  - UcbGoodsConfigStorage
+  - UcbProductConfigStorage
+  - UcbProductStorage
+  - UcbCitySalesReportStorage
+  - UcbCityStorage
+  - UcbRepresentativeSalesReportStorage
+  - UcbResourceConfigStorage
+  - UcbRepresentativeConfigStorage
+  - UcbRepresentativeStorage
+  - UcbHospitalSalesReportStorage
+  - UcbDestConfigStorage
+  - UcbHospitalConfigStorage
+  - UcbHospitalStorage
 - name: UcbSalesReportResource
   method: NewSalesReportResource
   storages:
@@ -398,6 +432,7 @@ resources:
   - UcbHospitalSalesReportStorage
   - UcbRepresentativeSalesReportStorage
   - UcbProductSalesReportStorage
+  - UcbCitySalesReportStorage
   - UcbPaperStorage
   - UcbSalesConfigStorage
   - UcbScenarioStorage
@@ -414,16 +449,21 @@ resources:
   storages:
   - UcbHospitalSalesReportStorage
   - UcbSalesReportStorage
+  - UcbDestConfigStorage
+  - UcbGoodsConfigStorage
+  - UcbResourceConfigStorage
 - name: UcbProductSalesReportResource
   method: NewProductSalesReportResource
   storages:
   - UcbProductSalesReportStorage
   - UcbSalesReportStorage
+  - UcbGoodsConfigStorage
 - name: UcbRepresentativeSalesReportResource
   method: NewRepresentativeSalesReportResource
   storages:
   - UcbRepresentativeSalesReportStorage
   - UcbSalesReportStorage
+  - UcbResourceConfigStorage
 - name: UcbTeamConfigResource
   method: NewTeamConfigResource
   storages:
@@ -523,11 +563,27 @@ resources:
   storages:
   - UcbCityStorage
   - UcbRegionStorage
+  - UcbCitySalesReportStorage
 - name: UcbManagerGoodsConfigResource
   method: NewManagerGoodsConfigResource
   storages:
   - UcbManagerGoodsConfigStorage
   - UcbManagerConfigStorage
+- name: UcbCitySalesReportResource
+  method: NewCitySalesReportResource
+  storages:
+  - UcbCitySalesReportStorage
+  - UcbSalesReportStorage
+- name: UcbSimplifyResultResource
+  method: NewSimplifyResultResource
+  storages:
+  - UcbSimplifyResultStorage
+  - UcbAssessmentReportStorage
+- name: UcbScenarioResultResource
+  method: NewScenarioResultResource
+  storages:
+  - UcbScenarioResultStorage
+  - UcbSimplifyResultStorage
 
 
 services:
@@ -669,6 +725,16 @@ services:
 - name: ucb-manager-goods-config
   model: UcbManagerGoodsConfig
   resource: UcbManagerGoodsConfigResource
+- name: ucb-city-sales-report
+  model: UcbCitySalesReport
+  resource: UcbCitySalesReportResource
+- name: ucb-simplify-result
+  model: UcbSimplifyResult
+  resource: UcbSimplifyResultResource
+- name: ucb-scenario-result
+  model: UcbScenarioResult
+  resource: UcbScenarioResultResource
+
 
 functions:
 - name: UcbGeneratePaperHandler
@@ -688,9 +754,7 @@ functions:
   method: CallRCalculate
   http: POST
   args:
-#  - docker.for.mac.host.internal:8000
-  - 127.0.0.1:8000
-  - Ucb
+  - name
 
 middlewares:
 - name: UcbCheckTokenMiddleware
@@ -699,6 +763,7 @@ middlewares:
   - BmRedisDaemon
   args:
   - oauth.pharbers.com
+
 panic:
   name: UcbCommonPanicHandle
   create: NewCommonPanicHandle
@@ -707,15 +772,15 @@ daemons:
   - name: BmMongodbDaemon
     method: NewMongoDBDaemon
     args:
-      host: primary
-      port: 27017
+      host: 123.56.179.133
+      port: 5555
       user: pharbers
       pass: pharbers2019
-      database: pharbers-ntm-client
+      database: pharbers-ucb-client-temp
   - name: BmRedisDaemon
     method: NewRedisDBDaemon
     args:
-      host: redis
-      port: 6379
+      host: 123.56.179.133
+      port: 6378
       password: pharbers
       database: 0
