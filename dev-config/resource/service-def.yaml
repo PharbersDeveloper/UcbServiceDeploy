@@ -755,6 +755,15 @@ functions:
   http: POST
   args:
   - name
+- name: UcbSubscriptionFuncHandler
+  create: NewCallRHandler
+  daemons:
+  - BmMongodbDaemon
+  - BmRedisDaemon
+  method: SubscriptionFunc
+  http: GET
+  args:
+  - name
 
 middlewares:
 - name: UcbCheckTokenMiddleware
@@ -778,7 +787,7 @@ daemons:
       port: 27017
 #      user: pharbers
 #      pass: pharbers2019
-      database: pharbers-ucb-client-temp
+      database: pharbers-ntm-client
   - name: BmRedisDaemon
     method: NewRedisDBDaemon
     args:
