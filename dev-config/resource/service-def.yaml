@@ -755,15 +755,6 @@ functions:
   http: POST
   args:
   - name
-- name: UcbSubscriptionFuncHandler
-  create: NewCallRHandler
-  daemons:
-  - BmMongodbDaemon
-  - BmRedisDaemon
-  method: SubscriptionFunc
-  http: GET
-  args:
-  - name
 
 middlewares:
 - name: UcbCheckTokenMiddleware
