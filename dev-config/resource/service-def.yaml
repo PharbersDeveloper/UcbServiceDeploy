@@ -755,6 +755,24 @@ functions:
   http: POST
   args:
   - name
+- name: UcbGenerateCSVHandler
+  create: NewGenerateCSVHandler
+  daemons:
+  - BmMongodbDaemon
+  - BmRedisDaemon
+  method: GenerateCSV
+  http: POST
+  args:
+  - files
+- name: UcbDownLoadFileHandler
+  create: NewDownLoadFileHandler
+  daemons:
+  - BmMongodbDaemon
+  - BmRedisDaemon
+  method: DownLoad
+  http: GET
+  args:
+  - files
 
 middlewares:
 - name: UcbCheckTokenMiddleware
@@ -778,7 +796,7 @@ daemons:
       port: 27017
 #      user: pharbers
 #      pass: pharbers2019
-      database: pharbers-ntm-client
+      database: pharbers-ucb-client-temp
   - name: BmRedisDaemon
     method: NewRedisDBDaemon
     args:
