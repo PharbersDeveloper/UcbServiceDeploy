@@ -751,10 +751,29 @@ functions:
   daemons:
   - BmMongodbDaemon
   - BmRedisDaemon
+  - UcbXmppDaemon
   method: CallRCalculate
   http: POST
   args:
-  - name
+  - 5cbe7ab8f4ce4352ecb082a3@conference.max.logic
+- name: UcbGenerateCSVHandler
+  create: NewGenerateCSVHandler
+  daemons:
+  - BmMongodbDaemon
+  - BmRedisDaemon
+  method: GenerateCSV
+  http: POST
+  args:
+  - files
+- name: UcbDownLoadFileHandler
+  create: NewDownLoadFileHandler
+  daemons:
+  - BmMongodbDaemon
+  - BmRedisDaemon
+  method: DownLoad
+  http: GET
+  args:
+  - files
 
 middlewares:
 - name: UcbCheckTokenMiddleware
@@ -785,3 +804,6 @@ daemons:
       password:
       # password: pharbers
       database: 0
+  - name: UcbXmppDaemon
+    method: NewUcbXmppBDaemon
+    args:
