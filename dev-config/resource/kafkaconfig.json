@@ -2,9 +2,9 @@
   "Broker":"59.110.31.50:9092",
   "SchemaRepositoryUrl":"http://59.110.31.50:8081",
   "Group":"RCalcResult",
-  "CaLocation":"/Users/qianpeng/kafka_2.11-1.1.0/config/secrets/snakeoil-ca-1.crt",
-  "CaSignedLocation":"/Users/qianpeng/kafka_2.11-1.1.0/config/secrets/kafkacat-ca1-signed.pem",
-  "SslKeyLocation":"/Users/qianpeng/kafka_2.11-1.1.0/config/secrets/kafkacat.client.key",
+  "CaLocation":"/Users/qianpeng/kafka/secrets/snakeoil-ca-1.crt",
+  "CaSignedLocation":"/Users/qianpeng/kafka/secrets/kafkacat-ca1-signed.pem",
+  "SslKeyLocation":"/Users/qianpeng/kafka/secrets/kafkacat.client.key",
   "Pass":"pharbers",
   "Topics": [
     "GoCallRTopic",
