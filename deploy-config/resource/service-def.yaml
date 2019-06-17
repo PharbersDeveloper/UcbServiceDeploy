@@ -765,6 +765,7 @@ functions:
   http: POST
   args:
   - files
+  - /v0/DownLoad?filename=
 - name: UcbDownLoadFileHandler
   create: NewDownLoadFileHandler
   daemons:
