@@ -767,6 +767,7 @@ functions:
   args:
   - files
   - /v0/DownLoad?filename=
+  - 5cbe7ab8f4ce4352ecb082a3@conference.max.logic
 - name: UcbDownLoadFileHandler
   create: NewDownLoadFileHandler
   daemons:
