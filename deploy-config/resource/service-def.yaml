@@ -762,6 +762,7 @@ functions:
   daemons:
   - BmMongodbDaemon
   - BmRedisDaemon
+  - UcbXmppDaemon
   method: GenerateCSV
   http: POST
   args:
