@@ -499,6 +499,7 @@ resources:
   - UcbManageTimeResultStorage
   - UcbManageTeamResultStorage
   - UcbGeneralPerformanceResultStorage
+  - UcbSimplifyResultStorage
 - name: UcbAssessmentReportDescribeResource
   method: NewAssessmentReportDescribeResource
   storages:
@@ -761,11 +762,13 @@ functions:
   daemons:
   - BmMongodbDaemon
   - BmRedisDaemon
+  - UcbXmppDaemon
   method: GenerateCSV
   http: POST
   args:
   - files
   - /v0/DownLoad?filename=
+  - 5cbe7ab8f4ce4352ecb082a3@conference.max.logic
 - name: UcbDownLoadFileHandler
   create: NewDownLoadFileHandler
   daemons:
@@ -782,7 +785,7 @@ middlewares:
   daemons:
   - BmRedisDaemon
   args:
-#  - oauth.pharbers.com
+  # - 123.56.179.133:9096
   - 192.168.100.174:9096
 panic:
   name: UcbCommonPanicHandle
@@ -792,10 +795,11 @@ daemons:
   - name: BmMongodbDaemon
     method: NewMongoDBDaemon
     args:
-#      host: 123.56.179.133
-#      port: 5555
-      host: 127.0.0.1
+      host: 192.168.100.174
       port: 27017
+#      host: 127.0.0.1
+#      host: docker.for.mac.host.internal
+#      port: 27017
 #      user: pharbers
 #      pass: pharbers2019
       database: pharbers-ucb-client-temp
@@ -805,6 +809,7 @@ daemons:
 #      host: 123.56.179.133
 #      port: 6378
       host: 127.0.0.1
+#      host: docker.for.mac.host.internal
       port: 6379
 #      password: pharbers
       password:

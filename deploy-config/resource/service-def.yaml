@@ -499,6 +499,7 @@ resources:
   - UcbManageTimeResultStorage
   - UcbManageTeamResultStorage
   - UcbGeneralPerformanceResultStorage
+  - UcbSimplifyResultStorage
 - name: UcbAssessmentReportDescribeResource
   method: NewAssessmentReportDescribeResource
   storages:
