@@ -40,7 +40,7 @@ models:
   - UcbManageTimeResult
   - UcbManageTeamResult
   - UcbAssessmentReport
-  - UcbTitle
+  - UcbEvaluation
   - UcbGeneralPerformanceResult
   - UcbGoodsinput
   - UcbCity
@@ -214,8 +214,8 @@ storages:
   method: NewAssessmentReportStorage
   daemons:
   - BmMongodbDaemon
-- name: UcbTitleStorage
-  method: NewTitleStorage
+- name: UcbEvaluationStorage
+  method: NewEvaluationStorage
   daemons:
   - BmMongodbDaemon
 - name: UcbGeneralPerformanceResultStorage
@@ -257,7 +257,7 @@ resources:
   - UcbRegionStorage
   - UcbRepresentativeStorage
   - UcbLevelStorage
-  - UcbTitleStorage
+  - UcbEvaluationStorage
 - name: UcbPolicyResource
   method: NewPolicyResource
   storages:
@@ -544,10 +544,10 @@ resources:
   - UcbManageTimeResultStorage
   - UcbManageTeamResultStorage
   - UcbPaperStorage
-- name: UcbTitleResource
-  method: NewTitleResource
+- name: UcbEvaluationResource
+  method: NewEvaluationResource
   storages:
-  - UcbTitleStorage
+  - UcbEvaluationStorage
   - UcbLevelConfigStorage
 - name: UcbGeneralPerformanceResultResource
   method: NewGeneralPerformanceResultResource
@@ -711,9 +711,9 @@ services:
 - name: ucb-assessment-report
   model: UcbAssessmentReport
   resource: UcbAssessmentReportResource
-- name: ucb-title
-  model: UcbTitle
-  resource: UcbTitleResource
+- name: ucb-evaluation
+  model: UcbEvaluation
+  resource: UcbEvaluationResource
 - name: ucb-general-performance-result
   model: UcbGeneralPerformanceResult
   resource: UcbGeneralPerformanceResultResource
