@@ -8,6 +8,7 @@
   "Pass":"pharbers",
   "Topics": [
     "GoCallRTopicTest",
-    "RReturnResultTest"
+    "RReturnResultTest",
+    "UCBDownLoadTest"
   ]
 }
